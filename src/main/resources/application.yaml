@@ -1,0 +1,28 @@
+spring:
+  application.name: ContainerTransportManagementSystem
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+  jpa:
+    database-platform: "org.hibernate.dialect.H2Dialect"
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      use-new-id-generator-mappings: false
+  datasource:
+    driverClassName: "org.h2.Driver"
+    url: "jdbc:h2:mem:testdb"
+    username: sa
+    password:
+  h2.console:
+    enabled: true
+    console.path: "/h2-console"
+
+logging.level:
+  org:
+    springframework: INFO
+    hibernate:
+      SQL: DEBUG
+      type.descriptor.sql.BasicBinder: TRACE
